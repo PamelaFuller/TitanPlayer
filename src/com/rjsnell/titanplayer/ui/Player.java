@@ -1,18 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.rjsnell.titanplayer.ui;
 
-/**
- *
- * @author Rich
- */
+import javax.swing.JFrame;
+
+
 public class Player extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Player
-     */
     public Player() {
 	initComponents();
     }
@@ -26,6 +19,8 @@ public class Player extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         txtPlaylistName = new javax.swing.JTextField();
@@ -59,6 +54,17 @@ public class Player extends javax.swing.JFrame {
         lstLibrary = new javax.swing.JList();
         jScrollPane3 = new javax.swing.JScrollPane();
         lstPlaylists = new javax.swing.JList();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        mnuLibraryAddSong = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        mnuPlaylistNewPlaylist = new javax.swing.JMenuItem();
+
+        jMenu3.setText("jMenu3");
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -297,6 +303,33 @@ public class Player extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        jMenu4.setText("Library");
+
+        mnuLibraryAddSong.setText("Add song");
+        mnuLibraryAddSong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuLibraryAddSongActionPerformed(evt);
+            }
+        });
+        jMenu4.add(mnuLibraryAddSong);
+
+        jMenuBar1.add(jMenu4);
+
+        jMenu5.setText("Playlist");
+
+        mnuPlaylistNewPlaylist.setText("New playlist");
+        jMenu5.add(mnuPlaylistNewPlaylist);
+
+        jMenuBar1.add(jMenu5);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -325,9 +358,18 @@ public class Player extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void mnuLibraryAddSongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLibraryAddSongActionPerformed
+        NewLibraryItem newSongWindow = new NewLibraryItem();
+        JFrame newSongItemFrame = new JFrame();
+        newSongItemFrame.add(newSongWindow);
+        newSongItemFrame.pack();
+        newSongItemFrame.setTitle("Add New Song To Library");
+        newSongItemFrame.setLocationRelativeTo(null);
+        newSongItemFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        newSongItemFrame.setVisible(true);
+    }//GEN-LAST:event_mnuLibraryAddSongActionPerformed
+
+
     public static void main(String args[]) {
 	/* Set the Nimbus look and feel */
 	//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -379,6 +421,13 @@ public class Player extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -392,6 +441,8 @@ public class Player extends javax.swing.JFrame {
     private javax.swing.JList lstCurrentPlaylist;
     private javax.swing.JList lstLibrary;
     private javax.swing.JList lstPlaylists;
+    private javax.swing.JMenuItem mnuLibraryAddSong;
+    private javax.swing.JMenuItem mnuPlaylistNewPlaylist;
     private javax.swing.JTextField txtPlaylistName;
     // End of variables declaration//GEN-END:variables
 }
